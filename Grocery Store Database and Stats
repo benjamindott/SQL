@@ -1,0 +1,31 @@
+--Create a Grocery Store Database
+
+CREATE TABLE Store (id INTEGER PRIMARY KEY, Item TEXT, Aisle INTEGER, Price NUMERIC, Units_Sold_Last_Week INTEGER);
+INSERT INTO Store VALUES (1,"volleyball",10,60,5);
+SELECT * FROM Store;
+INSERT INTO Store VALUES (2,"basketball",10,40,3);
+INSERT INTO Store VALUES (3,"football",10,40,8);
+INSERT INTO Store VALUES (4,"soccer ball",10,45,7);
+INSERT INTO Store VALUES (5, "tennis balls",10,5,20);
+INSERT INTO Store VALUES (6, "volleyball net",5,300,2);
+INSERT INTO Store VALUES (7, "basektball goal",5,200,8);
+INSERT INTO Store VALUES (8,"football helmet",3,30,12);
+INSERT INTO Store VALUES (9, "tennis raquet",3,70,5);
+INSERT INTO Store VALUES (10, "soccer cleats",15,35,10);
+INSERT INTO Store VALUES (11,"football cleats",15,55,12);
+INSERT INTO Store VALUES (12,"baseball bat",3,70,3);
+INSERT INTO Store VALUES (13, "knee pads",15,20,15);
+INSERT INTO Store VALUES (14,"KT tape",20,20,10);
+INSERT INTO Store VALUES (15,"ice pack",20,7,18);
+
+--Display the database ordered by price.
+
+SELECT * FROM store ORDER BY price;
+
+--What is the sum of the units sold last week colum?
+
+SELECT SUM(units_sold_last_week) FROM store;
+
+--What is the most expensive item sold?
+
+SELECT MAX(price) FROM store;
